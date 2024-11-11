@@ -1,7 +1,7 @@
 import speech_recognition
 
 robot_ear = speech_recognition.Recognizer()
-with speech_recognition.Microphone(device_index=2) as mic:
+with speech_recognition.Microphone() as mic:
     print("Say something!")
     audio = robot_ear.listen(mic)
 
@@ -10,4 +10,4 @@ try:
 except:
     you = ""
 
-print("You:" + you)
+print(you)
